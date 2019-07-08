@@ -10,15 +10,20 @@ Implement it in your project via Gradle:
 ```java
 dependencies {
     ...
-    implementation 'com.saintrepublic.tools:animus:1.1'
+    implementation 'com.saintrepublic.tools:animus:1.2'
 }
 ```
 
-Animus is a full static class, so anywhere you need you can write something like this:
+Animus is a static class, so anywhere you need you can write something like this:
 ```java
 Animus.Alpha.show(duration, fillAfter);
 ```
 And you will get a new Animation class instance.
+
+Also you can create non-static instances of Animus via subclass `Instance`:
+```java
+Animus.Instance animus = new Animus.Instance(...);
+```
 
 ## Example
 ```java
